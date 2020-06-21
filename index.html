@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>GPS DATA</title>
+    <meta charset="utf-8">
+	<style>
+		a:link {background-color: YELLOW;text-decoration: none;}
+		table, th, td
+	</style>
+  </head>
+
+  <body>
+    <h1  style=font-size:300%; ALIGN=CENTER>GPS DATA</h1>
+		<p ALIGN=CENTER style=font-size:150%><b>Location Details</b></p>
+		<table ALIGN=CENTER style=width:50%>
+			<tr>
+				<th>Latitude</th>
+				<td ALIGN=CENTER >lat_str</td>
+			</tr>
+			<tr>
+				<th>Longitude</th>
+				<td ALIGN=CENTER >lng_str</td>
+			</tr>
+			<tr> 
+				<th>Date</th>
+				<td ALIGN=CENTER >date_str</td>
+			</tr>
+			<tr>
+				<th>Time</th>
+				<td ALIGN=CENTER >time_str</td>
+			</tr>
+		</table>
+		<div id="map" style="width:500px;height:400px;"></div>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=50df6195d9cd0ce2c002693b6a6bc1ea"></script>
+		<script>
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(33.450701, 126.570667),
+				level: 3
+			};
+			var map = new kakao.maps.Map(container, options);
+		</script>
+  </body>
+</html>
+© 2020 GitHub, Inc.
